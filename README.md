@@ -10,7 +10,7 @@ A full-stack online learning platform built with the MERN stack (MongoDB, Expres
 - View course details including instructor, duration, and content
 - Enroll in courses
 - View enrolled courses dashboard
-- **AI-Powered Course Recommendations** - Get personalized course suggestions using GPT-3
+- **AI-Powered Course Recommendations** - Get personalized course suggestions using GPT-4
 - Success messages upon enrollment
 
 ### Instructor Features
@@ -37,7 +37,7 @@ A full-stack online learning platform built with the MERN stack (MongoDB, Expres
 - **JWT** - Authentication tokens
 - **bcryptjs** - Password hashing
 - **express-validator** - Input validation
-- **OpenAI** - GPT-3 integration for AI recommendations
+- **OpenAI** - GPT-4 integration for AI recommendations
 - **JWT** - Authentication tokens
 - **bcryptjs** - Password hashing
 - **express-validator** - Input validation
@@ -180,7 +180,7 @@ This creates:
 ## AI-Powered Features
 
 ### Course Recommendations
-Students can get personalized course recommendations powered by GPT-3:
+Students can get personalized course recommendations powered by GPT-4:
 - Enter career goals like "I want to be a software engineer"
 - Receive 3-5 most relevant course recommendations
 - Get detailed explanations for why each course is recommended

@@ -10,7 +10,7 @@ dotenv.config();
 const users = [
   // Instructors
   {
-    email: 'john.doe@example.com',
+    email: 'instructor@gmail.com',
     password: 'password123',
     fullName: 'John Doe',
     role: 'instructor'
@@ -29,7 +29,7 @@ const users = [
   },
   // Students
   {
-    email: 'alice@example.com',
+    email: 'student@gmail.com',
     password: 'password123',
     fullName: 'Alice Williams',
     role: 'student'
@@ -465,11 +465,11 @@ async function seedDatabase() {
     console.log('\nSample Login Credentials:');
     console.log('================================');
     console.log('\nInstructor Accounts:');
-    console.log('Email: john.doe@example.com | Password: password123');
+    console.log('Email: instructor@gmail.com | Password: password123');
     console.log('Email: jane.smith@example.com | Password: password123');
     console.log('Email: mike.johnson@example.com | Password: password123');
     console.log('\nStudent Accounts:');
-    console.log('Email: alice@example.com | Password: password123');
+    console.log('Email: student@gmail.com | Password: password123');
     console.log('Email: bob@example.com | Password: password123');
     console.log('Email: charlie@example.com | Password: password123');
     console.log('Email: diana@example.com | Password: password123');
