@@ -5,7 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/ui/card';
 import toast from 'react-hot-toast';
 import api from '@/lib/api';
-import { Sparkles, BookOpen, TrendingUp, Clock, User } from 'lucide-react';
+import { Sparkles, BookOpen, Clock, User } from 'lucide-react';
 
 export default function AIRecommendations() {
   const [prompt, setPrompt] = useState('');
@@ -135,34 +135,30 @@ export default function AIRecommendations() {
 
         {/* AI Response */}
         {response && (
-          <div className="space-y-6">
-            {/* AI Analysis */}
-            <Card>
+          <div className="space-y-6 animate-fade-in">
+            {/* AI Summary Card */}
+            <Card className="bg-white border-blue-100">
               <CardHeader>
                 <CardTitle className="flex items-center">
-                  <TrendingUp className="h-5 w-5 mr-2 text-blue-600" />
-                  AI Analysis & Recommendations
+                  Summary
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="prose max-w-none">
-                  <div className="whitespace-pre-wrap text-gray-700 leading-relaxed">
-                    {response.aiResponse}
-                  </div>
+                <div className="prose max-w-none text-gray-700 whitespace-pre-wrap">
+                  {response.aiResponse ? response.aiResponse.split('\n').slice(0, 2).join(' ') : 'Here are the most relevant courses for your goals.'}
                 </div>
               </CardContent>
             </Card>
 
-            {/* Recommended Courses */}
-            {response.recommendedCourses && response.recommendedCourses.length > 0 && (
-              <div>
+            {response.recommendedCourses && response.recommendedCourses.length > 0 ? (
+              <>
                 <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
                   <BookOpen className="h-6 w-6 mr-2 text-blue-600" />
                   Recommended Courses ({response.recommendedCourses.length})
                 </h2>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {response.recommendedCourses.map((course) => (
-                    <Card key={course._id} className="hover:shadow-lg transition-shadow">
+                  {response.recommendedCourses.map((course, idx) => (
+                    <Card key={course._id} className="hover:shadow-xl transition-shadow duration-300 animate-fade-in-up" style={{ animationDelay: `${idx * 80}ms` }}>
                       <CardHeader>
                         <div className="flex items-center justify-between mb-2">
                           <span className="text-xs font-semibold px-2 py-1 bg-blue-100 text-blue-800 rounded">
@@ -208,9 +204,13 @@ export default function AIRecommendations() {
                     </Card>
                   ))}
                 </div>
+              </>
+            ) : (
+              <div className="text-center text-gray-500 py-12">
+                <Sparkles className="mx-auto mb-4 h-8 w-8 text-blue-400 animate-bounce" />
+                <p>No relevant courses found for your query. Try a different prompt!</p>
               </div>
             )}
-
             {/* New Search Button */}
             <div className="text-center pt-4">
               <Button 

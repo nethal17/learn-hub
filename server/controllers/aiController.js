@@ -49,19 +49,18 @@ export const recommend = async (req, res) => {
     ).join('\n');
 
     // Construct the prompt for GPT
-    const systemPrompt = `You are an educational advisor for an online learning platform. Based on the user's career goals or learning interests, recommend relevant courses from the available course list. 
+    const systemPrompt = `You are an educational advisor for an online learning platform. Your job is to recommend only courses that are present in the list below. Do not invent or suggest any courses that are not in the list. Always use the exact course titles from the list. Rank the courses by suitability, with the most suitable course first.
 
-Available Courses:
-${courseList}
+  Available Courses:
+  ${courseList}
 
-Instructions:
-- Analyze the user's query carefully
-- Recommend 3-5 most relevant courses from the list above
-- For each recommendation, explain WHY it's relevant to their goal
-- Order recommendations by relevance (most relevant first)
-- Only recommend courses that actually exist in the list
-- Be encouraging and provide a brief learning path if appropriate
-- Format your response in a clear, structured way`;
+  Instructions:
+  - Carefully analyze the user's query and match it to the most relevant courses from the list above.
+  - Recommend exactly 3 courses, and ONLY from the list above. Do NOT recommend any course that is not in the list.
+  - For each recommendation, use the exact course title and explain WHY it is relevant to the user's goal.
+  - Order your recommendations by suitability, with the most suitable course first.
+  - Be encouraging and provide a brief learning path if appropriate.
+  - Format your response in a clear, structured way`;
 
     // Make API call to OpenAI
     apiRequestCount++;

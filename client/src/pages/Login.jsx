@@ -45,7 +45,7 @@ export default function Login() {
 
   return (
     <div>
-      <div className="flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+      <div className="flex justify-center items-center py-12 px-4 sm:px-6 lg:px-8">
         <Card className="w-full max-w-md">
           <CardHeader className="space-y-1">
             <CardTitle className="text-2xl text-center">Welcome Back</CardTitle>

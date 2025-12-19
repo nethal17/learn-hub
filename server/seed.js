@@ -61,6 +61,178 @@ const users = [
 ];
 
 const courses = [
+      {
+        title: 'Flutter Developer Bootcamp',
+        description: 'Become a cross-platform mobile app developer using Flutter and Dart. Build beautiful, high-performance apps for iOS and Android.',
+        content: `Course Outline:
+
+    Module 1: Introduction to Flutter & Dart
+    - Setting up Flutter environment
+    - Dart language basics
+    - Widgets and layouts
+
+    Module 2: App Development
+    - Navigation and routing
+    - State management
+    - Animations and custom UI
+
+    Module 3: Backend Integration
+    - REST APIs
+    - Firebase integration
+    - Authentication
+
+    Module 4: Deployment
+    - Testing and debugging
+    - Publishing to app stores
+    - Continuous integration
+
+    Module 5: Capstone Project
+    - Build and deploy a complete Flutter app`,
+        duration: '12 weeks',
+        level: 'Intermediate',
+        category: 'Mobile Development'
+      },
+      {
+        title: 'Cloud Services with AWS & Azure',
+        description: 'Learn the fundamentals of cloud computing and how to deploy, manage, and scale applications using AWS and Azure.',
+        content: `Course Outline:
+
+    Module 1: Cloud Computing Basics
+    - Cloud models (IaaS, PaaS, SaaS)
+    - AWS vs Azure overview
+    - Security and compliance
+
+    Module 2: AWS Essentials
+    - EC2, S3, Lambda
+    - IAM and security groups
+    - Deploying web apps
+
+    Module 3: Azure Essentials
+    - Azure VMs, Blob Storage
+    - Azure Functions
+    - Resource management
+
+    Module 4: DevOps in the Cloud
+    - CI/CD pipelines
+    - Monitoring and scaling
+    - Cost optimization
+
+    Module 5: Real-world Project
+    - Deploy and manage a cloud-based application`,
+        duration: '10 weeks',
+        level: 'Intermediate',
+        category: 'Cloud Computing'
+      },
+      {
+        title: 'Docker & Kubernetes for Developers',
+        description: 'Master containerization and orchestration with Docker and Kubernetes. Learn to build, deploy, and scale modern applications.',
+        content: `Course Outline:
+
+    Module 1: Introduction to Containers
+    - What is Docker?
+    - Images, containers, and registries
+    - Docker CLI basics
+
+    Module 2: Building & Managing Containers
+    - Dockerfiles
+    - Volumes and networks
+    - Docker Compose
+
+    Module 3: Kubernetes Fundamentals
+    - Pods, deployments, and services
+    - ConfigMaps and secrets
+    - Scaling and rolling updates
+
+    Module 4: CI/CD & Cloud Integration
+    - Kubernetes on AWS/Azure
+    - Helm charts
+    - Monitoring and logging
+
+    Module 5: Capstone Project
+    - Deploy a microservices app with Docker & Kubernetes`,
+        duration: '10 weeks',
+        level: 'Advanced',
+        category: 'DevOps'
+      },
+    {
+      title: 'Data Science with Python (Advanced)',
+      description: 'Master advanced data science techniques using Python, including data wrangling, feature engineering, and predictive modeling.',
+      content: `Course Outline:
+
+  Module 1: Advanced Pandas & Data Wrangling
+  - Data cleaning, merging, reshaping
+  - Feature engineering
+  - Handling missing data
+
+  Module 2: Statistical Analysis
+  - Hypothesis testing
+  - Regression analysis
+  - Time series analysis
+
+  Module 3: Predictive Modeling
+  - Model selection and evaluation
+  - Cross-validation
+  - Model deployment
+
+  Module 4: Real-world Project
+  - End-to-end data science project
+  - Model interpretation and reporting`,
+      duration: '12 weeks',
+      level: 'Advanced',
+      category: 'Data Science'
+    },
+    {
+      title: 'Machine Learning Foundations',
+      description: 'A comprehensive introduction to machine learning concepts, algorithms, and practical implementation using Python and scikit-learn.',
+      content: `Course Outline:
+
+  Module 1: Introduction to Machine Learning
+  - Supervised vs unsupervised learning
+  - Data preprocessing
+  - Feature selection
+
+  Module 2: Core Algorithms
+  - Linear regression
+  - Logistic regression
+  - Decision trees
+  - Clustering (K-means, hierarchical)
+
+  Module 3: Model Evaluation
+  - Metrics (accuracy, precision, recall, F1)
+  - Overfitting and regularization
+  - Cross-validation
+
+  Module 4: Hands-on Project
+  - Build and evaluate ML models on real datasets`,
+      duration: '10 weeks',
+      level: 'Intermediate',
+      category: 'Machine Learning'
+    },
+    {
+      title: 'Deep Learning & AI Applications',
+      description: 'Explore deep learning fundamentals and build AI-powered applications using neural networks, TensorFlow, and Keras.',
+      content: `Course Outline:
+
+  Module 1: Neural Networks Basics
+  - Perceptrons and activation functions
+  - Forward and backward propagation
+  - Loss functions
+
+  Module 2: Deep Learning Frameworks
+  - Introduction to TensorFlow and Keras
+  - Building and training neural networks
+
+  Module 3: Applications
+  - Image classification
+  - Natural language processing
+  - AI-powered web apps
+
+  Module 4: Capstone Project
+  - Design and deploy a deep learning solution`,
+      duration: '14 weeks',
+      level: 'Advanced',
+      category: 'Artificial Intelligence'
+    },
   {
     title: 'Introduction to Web Development',
     description: 'Learn the fundamentals of web development including HTML, CSS, and JavaScript. Perfect for beginners who want to start their journey in web development.',
